@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Names</title>
 </head>
 <body>
     <script>
         "use strict";
 
-        let name = prompt ( "What's your name?")
+        let name = prompt ( "What's your first name?");
+        let surname = prompt ("What's your last name?");
+        let fullname = name + surname;
+        document.write ("Hello " + fullname);
     </script>
 </body>
 </html>
