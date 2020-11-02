@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Married</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        let married = confirm("Are you married?\nIf yes press OK, if no press Cancel.");
+
+        let kids = confirm("Do you have kids?\nIf yes press OK, if no press Cancel.");
+
+        if (kids == true){
+            let kids_number = parseInt(prompt("How many kids do you have?"));
+        } else {
+            let kids_number = 0;
+        }
+        
+        switch (kids_number) {
+            case 0:
+                alert("No kids.");
+            break;
+            case 1:
+                alert("With one kid.");
+            break;
+            case 2:
+                alert("With two kids.");
+            break;
+            case 3:
+                alert("With three kids.");
+            break;
+            case (kids_number > 3):
+                alert("With many kids.")
+            break;
+        }
+            
+    </script>
+</body>
+</html>
