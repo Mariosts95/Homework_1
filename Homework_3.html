@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <script>
+        "use strict"
+
+        const username = "admin"
+        const password = "another1234password"
+
+        let username1 = prompt("Username:")
+
+        if (username1 != "admin") {
+            alert ("Could not find user")
+        } else if (username1 == username) {
+            let password1 = prompt("Password:")
+            if (password1 == password){
+                document.write ("Wellcome Admin!")
+            } else {
+                alert ("Unauthorized access!")
+            }
+        }
+        // Marios Tsioutsis
+    </script>
+</body>
+</html>
