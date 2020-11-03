@@ -8,35 +8,40 @@
 <body>
     <script>
         "use strict";
-
+        let kids_number = 0;
         let married = confirm("Are you married?\nIf yes press OK, if no press Cancel.");
-
         let kids = confirm("Do you have kids?\nIf yes press OK, if no press Cancel.");
 
         if (kids == true){
-            let kids_number = parseInt(prompt("How many kids do you have?"));
+            kids_number = parseInt(prompt("How many kids do you have?"));
         } else {
-            let kids_number = 0;
+            kids_number = 0;
         }
-        
-        switch (kids_number) {
-            case 0:
-                alert("No kids.");
-            break;
-            case 1:
-                alert("With one kid.");
-            break;
-            case 2:
-                alert("With two kids.");
-            break;
-            case 3:
-                alert("With three kids.");
-            break;
-            case (kids_number > 3):
-                alert("With many kids.")
-            break;
+        if (kids_number >= 0) {
+            switch (kids_number) {
+                case 0:
+                    status = "with no kids.";
+                break;
+                case 1:
+                    status = "with one kid.";
+                break;
+                case 2:
+                    status = "with two kids.";
+                break;
+                case 3:
+                    status = "with three kids.";
+                break;
+                default:
+                    status = "with many kids"
+                break;
+            }
+                if (married == true){
+                alert("Married " + status);
+            }
+                else {
+                alert("Not married " + status);
+                }
         }
-            
     </script>
 </body>
 </html>
