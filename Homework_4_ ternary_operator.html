@@ -12,6 +12,7 @@
         let married = confirm("Are you married?\nIf yes press OK, if no press Cancel.");
         let kids = confirm("Do you have kids?\nIf yes press OK, if no press Cancel.");
         let msg = "0";
+        
         if (kids == true){
             kids_number = parseInt(prompt("How many kids do you have?"));
         } else {
@@ -40,10 +41,12 @@
             }
                 else {
                 alert("Not married " + status);
-                } */
+                } 
+                */
         }
-        msg = ( married ? "Married " : "Not married " ) + status;
-            alert(msg);
+
+        msg = alert (( married ? "Married " : "Not married " ) + status);
+
     // Marios Tsioutsis
     </script>
 </body>
