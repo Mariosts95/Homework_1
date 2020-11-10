@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Married</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        let kids_number = 0;
+        let married = confirm("Are you married?\nIf yes press OK, if no press Cancel.");
+        let kids = confirm("Do you have kids?\nIf yes press OK, if no press Cancel.");
+        let msg = "0";
+        if (kids == true){
+            kids_number = parseInt(prompt("How many kids do you have?"));
+        } else {
+            kids_number = 0;
+        }
+        if (kids_number >= 0) {
+            switch (kids_number) {
+                case 0:
+                    status = "with no kids.";
+                break;
+                case 1:
+                    status = "with one kid.";
+                break;
+                case 2:
+                    status = "with two kids.";
+                break;
+                case 3:
+                    status = "with three kids.";
+                break;
+                default:
+                    status = "with many kids"
+                break;
+            }
+/*                 if (married == true){
+                alert("Married " + status);
+            }
+                else {
+                alert("Not married " + status);
+                } */
+        }
+        msg = ( married ? "Married " : "Not married " ) + status;
+            alert(msg);
+    // Marios Tsioutsis
+    </script>
+</body>
+</html>
