@@ -1,0 +1,37 @@
+<!-- Υλοποιήστε το παιχνίδι FizzBuzz σε JavaScript!
+1. Ξεκινήστε δημιουργώντας μία επανάληψη που να εμφανίζει στην
+κονσόλα τους αριθμούς από το 1 έως το 100.
+2. Αν ένας αριθμός διαιρείται με το 3 (αλλά όχι με το 5), εμφανίζεται
+στη θέση του αριθμού η λέξη "Fizz".
+3. Αν ένας αριθμός διαιρείται με το 5 (αλλά όχι με το 3), εμφανίζεται
+στη θέση του αριθμού η λέξη "Buzz".
+4. Αν ένας αριθμός διαιρείται και με το 3 και με το 5, εμφανίζεται
+στη θέση του αριθμού η λέξη "FizzBuzz". -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let i = 0;
+
+        while (i < 100) {
+            i += 1;
+            if (i % 3 == 0 && i % 5 !== 0) {
+                console.log('Fizz');
+            } else if ( i % 3 !== 0 && i % 5 == 0) {
+                console.log('Buzz');
+            } else if ( i % 3 == 0 && i % 5 == 0) {
+                console.log('FizzBuzz');
+            } else {
+                console.log(i);
+            }
+        }
+            //Marios Tsioutsis
+    </script>
+</body>
+</html>
