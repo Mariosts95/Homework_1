@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+</head>
+<!-- Τροποποιήστε το Classwork #1 ("μάντεψε τον αριθμό") και υλοποιήστε
+τις εξής βελτιώσεις:
+1. Προσθέστε έναν μετρητή που να μετρά των αριθμό των
+προσπαθειών.
+2. Μόλις ο αριθμός βρεθεί και τελειώσει η επανάληψη, εμφανίστε το
+μήνυμα "I found the number you were thinking about (x) in n
+try(ies)!"
+όπου x & n να εμφανίζονται οι κατάλληλες τιμές.
+3. Αν οι προσπάθειες ξεπεράσουν τις 7, να σταματά η επανάληψη
+και να εμφανίζεται το μήνυμα "There is something fishy about your
+answers...".
+ΣΗΜ: με την παραπάνω μέθοδο αποκλείεται να μη βρεθεί ο
+αριθμός σε 7 επαναλήψεις. -->
+<body>
+    <script>
+        'use strict';
+
+        let a = 1, b = 100, i = 0; 
+        alert(`think a number between ${a} and ${b}`);
+
+        while (true && i < 7) {
+
+            var c = Math.floor((a + b) / 2);
+
+            let answer = confirm(`Is it ${c}\n\nPress OK if yes, or Cancel otherwise`);
+            i += 1;
+            
+            if (answer) break; // answer === true
+            
+            let larger = confirm(`Is it larget than ${c}\n\nPress OK if yes, or Cancel otherwise`);
+
+            if (larger) {
+                a = c + 1;
+            } else {
+                b = c -1;
+            }
+        }
+            if (i >= 7){
+            alert(`There is something fishy about your answers...`)
+            } else {
+            alert(`I found the number you were thinking about ${c} in ${i} try(ies)!`)
+            }
+
+            //Marios Tsioutsis
+    </script>
+</body>
+</html>
