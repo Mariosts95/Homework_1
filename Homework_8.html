@@ -1,0 +1,50 @@
+<!-- Φτιάξτε ένα script που να ελέγχει αν ένας πίνακας είναι ταξινομημένος!
+1. Αρχικά, με τη βοήθεια μίας while(true), ζητάμε
+επαναλαμβανόμενα στοιχεία από το χρήστη και τα προσθέτουμε
+με τη σειρά σε έναν πίνακα.
+2. Η διαδικασία εισαγωγής σταματά όταν δοθεί για είσοδος το κενό
+string " " (αυτό συμβαίνει όταν ο χρήστης δε γράψει κάτι στο
+prompt και πατήσει το Enter/ OK).
+3. Σε μία νέα επανάληψη for, ελέγχουμε κάθε στοιχείο με το
+επόμενό του. Αν το στοιχείο στη θέση i είναι μικρότερο από το
+στοιχείο στη θέση i+1, συνεχίζουμε τον έλεγχο, διαφορετικά
+εμφανίζεται το μήνυμα "Not sorted" και η επανάληψη σταματά.
+4. Αν η επανάληψη ολοκληρωθεί, τότε σημάινει ότι όλοι οι έλεγχοι
+ήταν επιτυχής και εμφανίζεται το μήνυμα "Sorted". -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Array</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        let names = [];
+        let new_name = 0;
+        let sorted;
+
+        while(true) {
+            new_name = prompt('Add a name:');
+            names[names.length] = new_name; 
+
+            if (new_name == "" || new_name == null)
+                break;
+            
+        }
+            names.pop();
+            console.log (names);
+
+        for (let i = 0; i < names.length - 1; i++) {
+            if (names[i] < names[i+1]) {
+                sorted = 'Sorted!';
+            } else {
+                sorted = 'Not Sorted!';
+            }
+        }
+                alert(sorted);
+    </script>
+</body>
+</html>

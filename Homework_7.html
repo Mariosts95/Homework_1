@@ -1,0 +1,44 @@
+<!-- Φτιάξτε ένα script το οποίο κάνει διαδοχικά τις εξής ενέργειες, με τη
+συγκεκριμένη σειρά:
+1. Αρχικοποιεί έναν πίνακα planets με τις τιμές Mars, Saturn
+και Uranus.
+2. Προσθέτει στο τέλος του πίνακα τις τιμές Neptune και Pluto.
+3. Προσθέτει στην αρχή του πίνακα τις τιμές Mercury, Venus,
+Earth και Earth's Moon.
+4. Παρεμβάλλει την τιμή Jupiter, μεταξύ των Mars και Saturn.
+5. Αφαιρεί την τιμή Earth's Moon.
+6. Αφαιρεί την τιμή Pluto :(.
+7. Εμφανίζει τα στοιχεία του πίνακα (όπως/όπου θέλετε), είτε με τη
+χρήση μίας "κλασικής" for, είτε με τη χρήση της for...of. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planets Array</title>
+</head>
+<body>
+    <script>
+        'use script';
+
+        const planets = ['Mars', 'Saturn', 'Uranus'];
+
+        planets.push('Neptune', 'Pluto');
+        planets.unshift('Mercury', 'Venus', 'Earth', 'Earth' + "'"+ 's Moon');
+
+        let part = planets.splice([5]);
+        planets.push('Jupiter');
+        planets.push(...part);
+        
+        planets.splice(3,1);
+        planets.pop();
+
+        for ( let i = 0; i < planets.length; i++){
+            document.write('<li>'+ planets[i] +'</li>');
+        }
+
+        //console.log(planets);
+        //console.log(part);
+    </script>
+</body>
+</html>
