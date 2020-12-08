@@ -1,0 +1,98 @@
+<!-- Φτιάξτε ένα `script` που να δέχεται ένα λεκτικό από το χρήστη και θα ελέγχει αν το λεκτικό αυτό περιέχει μη
+επιτρεπόμενους χαρακτήρες. Ο έλεγχος αυτός πρέπει να γίνεται με τη βοήθεια μιας συνάρτησης, όπως αυτή φαίνεται παρακάτω:
+
+
+// Should return true/false
+
+function containsNotAllowedChars(input) {
+
+const notAllowedChars = ['<', '>' , '@' , '#' ]; ... } Η συνάρτηση μπορεί να παίρνει έναν-έναν τους χαρακτήρες του
+    λεκτικού και να ελέγχει αν υπάρχουν στον πίνακα ή το ανάποδο. Αν βρεθεί μη επιτρεπτός χαρακτήρας θα πρέπει να
+    επιστρέφεται η τιμή `true`, αλλιώς η τιμή `false`. Η όλη διαδικασία επαναλαμβάνεται μέχρι να δοθεί έγκυρο λεκτικό
+    από το χρήστη. Για να ελέγξετε τη συνάρτηση που φτιάξατε μπορείτε να εκτελέσετε το παρακάτω: if
+    (!containsNotAllowedChars('This is a test') && containsNotAllowedChars('This is a <test>') &&
+
+    containsNotAllowedChars('This is @ test') &&
+
+    containsNotAllowedChars('T#is is a test'))
+
+    {
+
+    alert('All good!');
+
+    } else {
+
+    alert('Something is not right');
+
+    } -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            'use strict';
+
+            const notAllowedChars = ['<', '>', '@', '#'];
+
+            let a = "hello #world";
+            let b = "world";
+
+            for (let i=0; i<notAllowedChars.length; i++){
+            let c = a.indexOf(notAllowedChars[i]);
+                if (c > -1) {
+                    alert('error');
+                }
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*             let input = prompt('Give me a word');
+            let check = true;
+
+            const containsNotAllowedChars = (input) => {
+                for (let i = 0; i < input.length; i++) {
+                    for (let j = 0; j < notAllowedChars.length; j++){
+
+                    }
+                    if (input[i] == notAllowedChars[j]) {
+                        alert('error');
+                    } else{
+                        alert('correct');
+                    }
+                    }
+                }
+
+                
+                
+
+                console.log(containsNotAllowedChars(input)); */
+
+
+
+
+        </script>
+    </body>
+    </html>

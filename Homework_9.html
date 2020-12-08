@@ -1,0 +1,52 @@
+<!-- 
+Γράψτε μία συνάρτηση με το όνομα `longestWord` η οποία να δέχεται έναν 
+πίνακα με αλφαριθμητικά και να επιστρέφει το
+μεγαλύτερο από αυτά.
+
+
+Για να την ελέγξετε, μπορείτε να χρησιμοποιήσετε τον κώδικα 
+του παραδείγματος 4 (από τα ClassScripts) και συγκεκριμένα
+τα κομμάτι εκείνο που ζητά επαναληπτικά τιμές από το χρήστη και τις αποθηκεύει σε πίνακα. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework_9</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        let max = 0;
+        let pos = 0;
+
+
+        const planets = [
+                "Mercury",
+                "Venus",
+                "Earth",
+                "Mars",
+                "Jupiter",
+                "Saturn",
+                "Uranus",
+                "Neptune"
+            ];
+
+
+        const longestWord = ([a]) => {
+            for (let i = 0; i < planets.length; i++) {
+                if (planets[i].length >= max) {
+                    max = planets[i].length;
+                    pos = i;
+                }
+            }       
+            return planets[pos];
+        };
+
+
+    console.log(longestWord([planets]));
+    </script>
+</body>
+</html>
