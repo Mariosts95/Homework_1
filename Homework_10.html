@@ -31,68 +31,40 @@ const notAllowedChars = ['<', '>' , '@' , '#' ]; ... } Η συνάρτηση μ�
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Not Allowed Characters</title>
     </head>
     <body>
         <script>
             'use strict';
 
-            const notAllowedChars = ['<', '>', '@', '#'];
+            const input = prompt('Please, enter your username');
 
-            let a = "hello #world";
-            let b = "world";
+            function containsNotAllowedChars(validation) {
+                const notAllowedChars = ['<', '>', '@', '#'];
+                validation = input.split('');
+                let notvalid = false;
+                for (let i = 0; i < validation.length; i++) {
+                    for (let j = 0; j < notAllowedChars.length; j++) {
+                        if (validation[i] == notAllowedChars[j]) {
+                            notvalid = true;
+                            break;
+                        }
+                    }
 
-            for (let i=0; i<notAllowedChars.length; i++){
-            let c = a.indexOf(notAllowedChars[i]);
-                if (c > -1) {
-                    alert('error');
                 }
-
+                return notvalid
             }
 
 
 
 
+            if (containsNotAllowedChars(input)) {
+                alert('Something is wrong!');
+            } else {
+                alert('All good!');
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*             let input = prompt('Give me a word');
-            let check = true;
-
-            const containsNotAllowedChars = (input) => {
-                for (let i = 0; i < input.length; i++) {
-                    for (let j = 0; j < notAllowedChars.length; j++){
-
-                    }
-                    if (input[i] == notAllowedChars[j]) {
-                        alert('error');
-                    } else{
-                        alert('correct');
-                    }
-                    }
-                }
-
-                
-                
-
-                console.log(containsNotAllowedChars(input)); */
-
-
-
-
+            //Marios Tsioutsis
         </script>
     </body>
     </html>

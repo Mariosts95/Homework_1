@@ -13,40 +13,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework_9</title>
+    <title>Longest Word</title>
 </head>
 <body>
     <script>
         'use strict';
 
-        let max = 0;
-        let pos = 0;
+        let max = 0 , position = 0;
 
+        const names = [];
 
-        const planets = [
-                "Mercury",
-                "Venus",
-                "Earth",
-                "Mars",
-                "Jupiter",
-                "Saturn",
-                "Uranus",
-                "Neptune"
-            ];
+        while (true) {
+            const input = prompt('Enter Name:');
+
+            if (input === '' || input === null) break;  // !input
+
+            names.push(input);
+        }
 
 
         const longestWord = ([a]) => {
-            for (let i = 0; i < planets.length; i++) {
-                if (planets[i].length >= max) {
-                    max = planets[i].length;
-                    pos = i;
+            for (let i = 0; i < a.length; i++) {
+                if (a[i].length >= max) {
+                    max = a[i].length;
+                    position = i;
                 }
             }       
-            return planets[pos];
+            return a[position];
         };
 
-
-    console.log(longestWord([planets]));
+        console.log(longestWord([names]));
+        
+        //Marios Tsioutsis
     </script>
 </body>
 </html>
