@@ -39,21 +39,20 @@ const notAllowedChars = ['<', '>' , '@' , '#' ]; ... } Η συνάρτηση μ�
 
             const input = prompt('Please, enter your username');
 
-            function containsNotAllowedChars(val) {
+            function containsNotAllowedChars(validation) {
                 const notAllowedChars = ['<', '>', '@', '#'];
-                let validation = val.split('');
+                validation = input.split('');
                 let notvalid = false;
-                for (let i = 0; i < validation.length; i++) {
-                    for (let j = 0; j < notAllowedChars.length; j++) {
-                        if (validation[i] == notAllowedChars[j]) {
+                    for (let i = 0; i < notAllowedChars.length; i++) {
+                        if (validation.indexOf(notAllowedChars[i]) == -1) {
                             notvalid = true;
                             break;
                         }
                     }
-
-                }
                 return notvalid;
             }
+
+            console.log(containsNotAllowedChars(input));
 
             if (containsNotAllowedChars(input)) {
                 alert('Something is wrong!');
